@@ -1,4 +1,4 @@
-// creo un array con all'interno degli oggetti 
+//DONE=>creo un array con all'interno degli oggetti 
 // creo una funzione che generi gli elementi del DOM
     // mi ricavo gli oggetti dell'array uno per uno, con le relative proprietà => FOR 
     // mi ricavo tutti i valori delle chiavi dell'oggetto => FOR IN 
@@ -49,8 +49,13 @@ const teamMembers = [
 
 console.log(teamMembers);
 for (let i = 0; i < teamMembers.length; i++){
-    /* let arrayIn = teamMembers[i]; */
     for ( let key in teamMembers[i] ){
         console.log(key, teamMembers[i][key]);
     }
+}
+
+
+// funzioni utili
+function name(params) {
+    
 }
