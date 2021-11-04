@@ -3,11 +3,12 @@
     // DONE=>scorro gli oggetti dell'array=> FOR 
     // DONE=>per ogni oggetto ricavo i valori delle chiavi e le salvo dentro delle variabili => FOR IN 
     // DONE=>nella funzione inserisco tutte le chiavi degli elementi 
-// creo un ascoltatore per il bottone
-    // al click mi ricavo i valori inseriti
-    // creo un oggetto 
-    // all'interno dell'oggetto inserisco i valori
-    // pusho l'oggetto nell'array principale 
+// DONE=>creo un ascoltatore per il bottone
+    // DONE=>al click mi ricavo i valori inseriti e li salvo in una variabile
+    // DONE=>creo un oggetto 
+    // DONE=>all'interno dell'oggetto inserisco i valori
+    // DONE=>pusho i l'oggetto nell'array
+    // DONE=>stampo l'oggetto in pagina tramite la funzione
 
 
 
@@ -47,7 +48,7 @@ const teamMembers = [
 
 ];
 
-//costante per collecare il container
+//costante per collegare il container
 const containerCard = document.querySelector(".team-container");
 //ciclo che uso per scorrere ogni elemento dell'array
 for (let i = 0; i < teamMembers.length; i++){
@@ -57,7 +58,32 @@ for (let i = 0; i < teamMembers.length; i++){
     let role = teamMembers[i].role;
     // funzione che utilizzo per stampare le card
     createTeamCard(nameTeam, image, role );
-}
+};
+
+//costante per collegare il bottone
+const btn = document.querySelector("#addMemberButton");
+
+btn.addEventListener("click",
+
+    function(){
+        let nameForm = document.querySelector("#name").value;
+        let imageForm = document.querySelector("#image").value;
+        let roleForm = document.querySelector("#role").value;
+        const newMember = {
+            "nameTeam" : nameForm,
+            "image" : imageForm,
+            "role" : roleForm
+        };
+        teamMembers.push(newMember)
+        console.log( "nuovo membro" , teamMembers);
+        console.log( "array agg" , newMember);
+        createTeamCard(nameForm, imageForm, roleForm);
+    }
+
+);
+
+
+
 
 // funzioni utili
 /* function createTeamCard() {
