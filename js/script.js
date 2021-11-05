@@ -75,28 +75,14 @@ btn.addEventListener("click",
             "role" : roleForm
         };
         teamMembers.push(newMember)
-        console.log( "nuovo membro" , teamMembers);
-        console.log( "array agg" , newMember);
+        console.log( "array agg" , teamMembers);
+        console.log( "nuovo membro"  , newMember);
         createTeamCard(nameForm, imageForm, roleForm);
     }
 
 );
 
 
-
-
-// funzioni utili
-/* function createTeamCard() {
-    let teamCard = document.createElement("div");
-    teamCard.classList.add("team-card");
-
-    let cardImage = document.createElement("div");
-    cardImage.classList.add("card-image");
-
-    let imgProfile = document.createElement("img");
-    cardImage.append(imgProfile);
-    cardImage.classList.add("card-image");
-} */
 
 
 function createTeamCard(nameTeam, image, role) {
@@ -115,3 +101,18 @@ function createTeamCard(nameTeam, image, role) {
         </div>
     `
 }
+
+
+// funzioni utili
+/* function createTeamCard() {
+    let teamCard = document.createElement("div");
+    teamCard.classList.add("team-card");
+
+    let cardImage = document.createElement("div");
+    cardImage.classList.add("card-image");
+
+    let imgProfile = document.createElement("img");
+    cardImage.append(imgProfile);
+    cardImage.classList.add("card-image");
+} */
+
